@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orqmesh"
+version = "0.1.0b1"
+description = "An infrastructure-neutral Python SDK for controlled agent workflows."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+authors = [{name = "Swayam Debata", email = "swayamdebata2003@gmail.com"}]
+keywords = ["agents", "workflow", "human-in-the-loop", "sdk"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "pytest>=8.0", "ruff>=0.6"]
+release = ["twine>=6.0"]
+
+[project.urls]
+Homepage = "https://github.com/SwayamDebata/orqmesh"
+Repository = "https://github.com/SwayamDebata/orqmesh"
+Issues = "https://github.com/SwayamDebata/orqmesh/issues"
+Changelog = "https://github.com/SwayamDebata/orqmesh/blob/main/CHANGELOG.md"
+Security = "https://github.com/SwayamDebata/orqmesh/blob/main/SECURITY.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["orqmesh*"]
+
+[tool.setuptools.package-data]
+orqmesh = ["py.typed"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
