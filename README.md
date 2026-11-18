@@ -55,9 +55,8 @@ Use a new run ID for each run. Never put credentials or sensitive data in checkp
 
 ## Documentation
 
-- [Website-ready user guide and examples](docs/website-guide.md)
-- [Architecture and implementation status](docs/architecture.md)
-- [GitHub setup, package publishing, and release checklist](docs/publishing.md)
+- [User guide](docs/website-guide.md)
+- [Architecture](docs/architecture.md)
 - [Changelog](CHANGELOG.md)
 - [Contributing](CONTRIBUTING.md)
 - [Security](SECURITY.md)

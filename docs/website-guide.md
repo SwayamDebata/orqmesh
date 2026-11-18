@@ -1,6 +1,6 @@
 # Orqmesh documentation
 
-> **Status: early beta candidate.** Orqmesh is an experimental Python SDK licensed under Apache-2.0. Source: https://github.com/SwayamDebata/orqmesh. Do not treat examples as production-ready. The package is not on PyPI yet.
+> **Status:** Alpha. Licensed under Apache-2.0. Examples are not production-ready. Source: https://github.com/SwayamDebata/orqmesh. Package: https://pypi.org/project/orqmesh/
 
 ## Overview
 
@@ -22,7 +22,7 @@ These are capability examples, not claims that the SDK guarantees compliance, ha
 
 - Python 3.11 or later.
 - The package declares no mandatory third-party runtime dependencies. Your application must independently install and configure any integration libraries it uses.
-- Install from a local checkout while the package is not yet on PyPI. After publication, install the prerelease explicitly, for example `python -m pip install "orqmesh==0.1.0b1"`.
+- Install the current prerelease with `python -m pip install "orqmesh==0.1.0b1"`.
 
 For local development in PowerShell, from the project root:
 
@@ -34,7 +34,7 @@ python -m pytest
 python -m ruff check .
 ```
 
-A local package wheel can be installed in a separate test environment after building and reviewing it; see [the publishing guide](publishing.md). Once a reviewed beta is published on an authorized index, an explicit prerelease version can be installed, for example `python -m pip install "orqmesh==0.1.0b1"`—this is not an assertion that the package is currently available.
+Install the published prerelease with `python -m pip install "orqmesh==0.1.0b1"`.
 
 ## Core concepts
 
@@ -195,10 +195,9 @@ Keep workflow definitions stable when resuming. Current checkpoints do not carry
 
 The repository includes a synthetic [document review example](../examples/document_review.py). The review request and input include document content, so only use test data with the local store. The example's caller decides whether review is needed; it does not analyze documents or call an LLM.
 
-- [Architecture and current limitations](architecture.md)
-- [Publishing and launch checklist](publishing.md)
-- [Contributing guidance](../CONTRIBUTING.md)
-- [Security guidance](../SECURITY.md)
+- [Architecture](architecture.md)
+- [Contributing](../CONTRIBUTING.md)
+- [Security](../SECURITY.md)
 
 ## Roadmap — not yet implemented
 
